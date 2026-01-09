@@ -3,46 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RewardMinty - Claim Your Rewards</title>
+    <title>RewardMinty - Premium Rewards & Giveaways</title>
     <style>
-        /* Modern Design System */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; text-align: center; }
-        .header { background: linear-gradient(135deg, #00b894, #00cec9); color: white; padding: 40px 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .container { max-width: 600px; margin: 30px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        h1 { margin: 0; font-size: 2.5em; }
-        .reward-img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
-        .btn-claim { background: #ff7675; color: white; border: none; padding: 18px 35px; font-size: 1.2em; border-radius: 50px; cursor: pointer; font-weight: bold; transition: 0.3s; width: 100%; box-shadow: 0 4px 15px rgba(255,118,117,0.4); }
-        .btn-claim:hover { background: #d63031; transform: scale(1.02); }
+        /* Modern UI Design */
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #1c1e21; text-align: center; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #27ae60, #2ecc71); color: white; padding: 50px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .main-card { max-width: 500px; margin: -40px auto 40px; background: white; padding: 40px 25px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid #ddd; }
         
-        /* Legal Disclaimer Box */
-        .disclaimer-box { max-width: 800px; margin: 40px auto; padding: 20px; background: #eee; border-radius: 8px; font-size: 11px; color: #666; text-align: left; line-height: 1.5; }
-        footer { padding: 20px; font-size: 12px; color: #999; }
-        footer a { color: #00b894; text-decoration: none; margin: 0 10px; }
+        /* Typography */
+        h1 { margin: 0; font-size: 2.8em; letter-spacing: -1px; }
+        h2 { color: #2d3436; margin-bottom: 20px; }
+        .sub-text { color: #636e72; font-size: 1.1em; margin-bottom: 30px; }
+
+        /* The Button - High Contrast for Conversions */
+        .btn-claim { background: #e74c3c; color: white; border: none; padding: 20px 40px; font-size: 1.3em; border-radius: 50px; cursor: pointer; font-weight: bold; transition: all 0.3s ease; width: 100%; box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4); text-transform: uppercase; }
+        .btn-claim:hover { background: #c0392b; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5); }
+        
+        /* Images */
+        .reward-image { width: 100%; border-radius: 12px; margin-bottom: 25px; border: 1px solid #eee; }
+
+        /* Legal & Disclaimer Section */
+        .disclaimer-box { max-width: 800px; margin: 40px auto; padding: 20px; background: #e9ecef; border-radius: 10px; font-size: 12px; color: #6c757d; text-align: left; border: 1px solid #dee2e6; }
+        footer { padding: 30px 20px; color: #adb5bd; font-size: 13px; }
+        footer a { color: #27ae60; text-decoration: none; margin: 0 10px; font-weight: 600; }
 
         /* Pop-up Modals */
-        .modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); }
-        .modal-content { background:white; margin:10% auto; padding:30px; width:80%; max-height:70%; overflow-y:auto; border-radius:15px; text-align:left; }
-        .close-btn { background:#00b894; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; margin-top:10px; }
+        .modal { display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter: blur(5px); }
+        .modal-content { background:white; margin:10% auto; padding:40px; width:80%; max-width:600px; max-height:70vh; overflow-y:auto; border-radius:20px; text-align:left; position: relative; }
+        .close-btn { background:#27ae60; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; margin-top:20px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>RewardMinty</h1>
-        <p>Premium Rewards & Gift Card Giveaways</p>
+        <p style="font-size: 1.2em; opacity: 0.9;">Join Thousands of Weekly Winners!</p>
     </div>
 
-    <div class="container">
-        <h2>Congratulations!</h2>
-        <p>You have been selected to participate in today's giveaway.</p>
-        <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&q=80&w=500" alt="Reward" class="reward-img">
-        <p>Click below to verify your details and claim your reward.</p>
+    <div class="main-card">
+        <h2>Exclusive Reward Entry</h2>
+        <p class="sub-text">Verify your human status to unlock the premium giveaway dashboard and claim your reward today.</p>
         
-        <button class="btn-claim" onclick="callLocker()">CLAIM MY REWARD</button>
+        <img src="https://images.unsplash.com/photo-1549463511-209257211603?auto=format&fit=crop&q=80&w=600" alt="Reward Prize" class="reward-image">
+        
+        <button class="btn-claim" onclick="callLocker()">Claim My Entry Now</button>
+        <p style="font-size: 0.9em; color: #b2bec3; margin-top: 15px;">Limited spots available for Indian residents today.</p>
     </div>
 
     <div class="disclaimer-box">
-        <strong>LEGAL DISCLAIMER:</strong> RewardMinty.com is an independent platform and is not affiliated with Facebook, Apple, or Google. Rewards are distributed by third-party sponsors upon successful completion of verification tasks. Completion of a task does not guarantee a reward. Users must be 18+ and residents of supported regions to participate.
+        <p><strong>LEGAL NOTICE:</strong> RewardMinty.com is an independent rewards aggregator. We are not affiliated with, sponsored by, or endorsed by Google, Facebook, Apple, or any specific brand mentioned on this site. 
+        <br><br>
+        <strong>How it works:</strong> Access to rewards requires the successful completion of verification tasks provided by third-party sponsors. These tasks may include surveys or app installations. Completion of a task does not guarantee a reward. Users must be 18+ to participate.</p>
     </div>
 
     <footer>
@@ -51,11 +62,26 @@
         <a href="javascript:void(0)" onclick="openModal('terms')">Terms of Service</a>
     </footer>
 
-    <div id="privacyModal" class="modal"><div class="modal-content"><h2>Privacy Policy</h2><p>We value your privacy. Your data is never sold to third parties. We use cookies for offer tracking.</p><button class="close-btn" onclick="closeModal('privacy')">Close</button></div></div>
-    <div id="termsModal" class="modal"><div class="modal-content"><h2>Terms of Service</h2><p>1. No VPN usage allowed. 2. One entry per person. 3. Decisions of sponsors are final.</p><button class="close-btn" onclick="closeModal('terms')">Close</button></div></div>
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <h3>Privacy Policy</h3>
+            <p>At RewardMinty, we protect your data. We use standard browser cookies to track offer completion and improve your experience. We do not store or sell your personal identifiable information to third parties.</p>
+            <button class="close-btn" onclick="closeModal('privacy')">I Understand</button>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <h3>Terms of Service</h3>
+            <p>1. Participation: Users must provide accurate information during tasks. <br>
+            2. Restrictions: Use of VPNs, Proxies, or Bots to complete offers is strictly prohibited and will result in a permanent ban. <br>
+            3. Responsibility: We are not responsible for the content or privacy practices of third-party advertiser tasks.</p>
+            <button class="close-btn" onclick="closeModal('terms')">Agree & Close</button>
+        </div>
+    </div>
 
     <script>
-        // FUNCTION 1: The Pop-up Modals
+        // Controls the Legal Pop-ups
         function openModal(type) {
             document.getElementById(type + 'Modal').style.display = 'block';
         }
@@ -63,12 +89,13 @@
             document.getElementById(type + 'Modal').style.display = 'none';
         }
 
-        // FUNCTION 2: The Money-Maker (CPAGrip Locker)
+        // The CPA Money-Making Trigger
         function callLocker() {
-            /* IMPORTANT: PASTE YOUR CPAGrip LOCKER JAVASCRIPT CODE HERE 
-               Currently, it will just show a message until you paste your real code.
+            /* ACTION REQUIRED: 
+               Log into CPAGrip > Monetization Tools > URL/File Lockers.
+               Copy your Javascript code and PASTE IT HERE.
             */
-            alert("Verification starting... Please complete the next step!");
+            alert("Redirecting to Human Verification. Please complete one task to unlock your reward!");
         }
     </script>
 
