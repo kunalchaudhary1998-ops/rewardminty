@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Rewards Hub</title>
+    <style>
+        :root {
+            --primary: #3b5998; /* Facebook Blue */
+            --accent: #00C851; /* Success Green */
+            --bg: #f0f2f5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3b5998, #8b9dc3);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 { margin: 0; font-size: 2.5rem; }
+        .hero p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: -40px auto 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        /* The Reward Item */
+        .reward-box {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+        .reward-img {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        /* The "Locker" Button */
+        .btn-unlock {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        }
+        .btn-unlock:hover { transform: scale(1.02); }
+
+        /* Social Proof */
+        .social-proof {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .avatar-group { display: flex; }
+        .avatar {
+            width: 30px; height: 30px; border-radius: 50%; background: #ccc;
+            border: 2px solid white; margin-left: -10px;
+        }
+        .avatar:first-child { margin-left: 0; }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 200, 81, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 200, 81, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 200, 81, 0); }
+        }
+
+        /* Disclaimer */
+        .footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Exclusive Daily Rewards</h1>
+        <p>Complete one simple step to claim your access.</p>
+    </div>
+
+    <div class="container">
+        <h2>Content Locked</h2>
+        <p>You are one step away from accessing the premium content/reward.</p>
+
+        <div class="reward-box">
+            <div class="reward-img">🔒</div>
+            <h3>$100 Gift Card / Premium File</h3>
+            <p>Status: <strong>Reserved for you</strong></p>
+        </div>
+
+        <button class="btn-unlock" onclick="triggerLocker()">Verify & Unlock Now</button>
+
+        <div class="social-proof">
+            <div class="avatar-group">
+                <div class="avatar" style="background:#f00"></div>
+                <div class="avatar" style="background:#0f0"></div>
+                <div class="avatar" style="background:#00f"></div>
+            </div>
+            <span>248 people unlocked this today</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2025. Not affiliated with Facebook/Meta.</p>
+        <p><a href="#">Terms</a> | <a href="#">Privacy</a></p>
+    </div>
+
+    <script>
+        function triggerLocker() {
+            // STEP 1: Sign up for a CPA Network (CPAGrip or OGAds)
+            // STEP 2: Create a "Content Locker" in their dashboard.
+            // STEP 3: Paste their 'onclick' code here.
+            
+            alert("This is where the CPA Offer Wall will pop up. \n\nSee Phase 2 instructions to get the real script!");
+        }
+    </script>
+
+</body>
+</html>
