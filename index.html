@@ -168,7 +168,8 @@
         <button onclick="closeModal('terms')" style="padding:10px 20px; background:#00b894; color:#fff; border:none; border-radius:5px; cursor:pointer;">Close</button>
     </div>
 </div>
-    function openModal(type) {
+ <script>
+       function openModal(type) {
     if(type === 'privacy') document.getElementById('privacyModal').style.display = 'block';
     if(type === 'terms') document.getElementById('termsModal').style.display = 'block';
 }
@@ -177,5 +178,6 @@ function closeModal(type) {
     if(type === 'privacy') document.getElementById('privacyModal').style.display = 'none';
     if(type === 'terms') document.getElementById('termsModal').style.display = 'none';
 }
+</script>
 </body>
 </html>
